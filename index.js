@@ -1,6 +1,5 @@
 export default function slice(el, start, del, ...items){
-  // exclude whitespace nodes
-  let children = [].filter.apply(el.childNodes, [c => 1 == c.nodeType]);
+  let children = el.childNodes;
 
   // if negative we start from the end
   if (start < 0) start = children.length + start;

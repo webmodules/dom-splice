@@ -11,10 +11,7 @@ function slice(el, start, del) {
     items[_key - 3] = arguments[_key];
   }
 
-  // exclude whitespace nodes
-  var children = [].filter.apply(el.childNodes, [function (c) {
-    return 1 == c.nodeType;
-  }]);
+  var children = el.childNodes;
 
   // if negative we start from the end
   if (start < 0) start = children.length + start;
