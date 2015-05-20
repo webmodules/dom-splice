@@ -25,12 +25,12 @@ export default function slice(el, start, del, ...items){
           ret.push(child);
         }
       }
-      sel = children[start + del];
     }
 
     if (items.length) {
+      sel = children[start];
       if (sel) {
-        items.forEach(function(item){
+        items.forEach(item => {
           el.insertBefore(item, sel);
         });
       } else {
