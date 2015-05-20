@@ -37,10 +37,10 @@ function slice(el, start, del) {
           ret.push(child);
         }
       }
-      sel = children[start + del];
     }
 
     if (items.length) {
+      sel = children[start];
       if (sel) {
         items.forEach(function (item) {
           el.insertBefore(item, sel);
